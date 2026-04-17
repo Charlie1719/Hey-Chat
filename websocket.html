@@ -6,14 +6,7 @@
     <div id="mensajes"></div>
 
     <script>
-        // Detecta si la conexión es segura (https usa wss://, http usa ws://)
-        const protocolo = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
-
-        // Obtiene el dominio actual automáticamente (ej. localhost:3000 o midominio.com)
-        const host = window.location.host;
-
-        // Crea la conexión dinámica
-        const socket = new WebSocket(protocolo + host);
+        const socket = new WebSocket('wss://hey-chat-1.onrender.com');
 
         socket.onopen = () => {
             console.log('El fascismo postmoderno es show que anestesia lo real');
